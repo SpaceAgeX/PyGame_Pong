@@ -51,7 +51,7 @@ class Ball():
     #Static Properies of the Ball
     radius = 12
 
-    speed = 6
+    speed = 8
 
     color = (255, 209, 89)
 
@@ -83,7 +83,7 @@ class Ball():
                     #print("On the bottom")
 
             #Increase Speed
-            self.speed += 0.25
+            self.speed += 0.5
         #Check to See if Collided With Opponent
         elif ((opponent.x-25 <= self.x <= (opponent.x+Paddle.width)) and (opponent.y <= self.y <= (opponent.y+ Paddle.height))):
             #Bounce off Opponent
@@ -100,7 +100,7 @@ class Ball():
                     #print("On the bottom")
 
             #Increase Speed
-            self.speed += 0.25
+            self.speed += 0.5
 
         # Normalize Velocity
         self.vx = self.vx/(math.sqrt((math.pow(self.vx,2)+math.pow(self.vy,2))))
